@@ -22,4 +22,9 @@ pub mod anchor_escrow {
         ctx.accounts.withdraw_and_close_vault()?;
         Ok(())
     }
+
+    pub fn refund(ctx: Context<Refund>) -> Result<()> {
+        ctx.accounts.refund_and_close_vault()?;
+        Ok(())
+    }
 }
